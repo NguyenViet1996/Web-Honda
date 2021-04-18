@@ -1,0 +1,93 @@
+.verhicles{
+    margin-top: 80px;
+    .verhicle__tab{
+        margin-left:$mg-2 - 5;
+        padding: .2em 0 2em!important;  
+        .nav-item{
+            .nav-link.active{
+                border-bottom: 5px solid $color-blue-0  !important;
+                color: $color-blue-0!important;
+            }
+        } 
+        li{
+            a{
+                font-size: $fs-0 - 2;
+                font-weight: $fw-bold-2;
+                color: $color-blue-4;
+                margin: 0 $mg-2 - 1;
+                padding: 0;
+                border:none !important;
+            }
+        }
+    }
+    span{
+        text-align: center;
+        p{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: $color-blue-5;
+            margin-top:$mg-2 - 5;    
+            font-size: 3.5rem;
+            font-weight: $fw-normal;
+        }
+        ul {
+            li{
+                a {
+                    color: #00324f;
+                }
+            } 
+        }
+    }
+    .carousel-control-prev,.carousel-control-next{
+        span{
+            position: absolute;
+            width:$width-0+10;
+            height: $height-3;
+            background-color: $color-gray-1;
+            border-radius: $border-radius + 3;
+            i {
+                font-size: $fs-5;
+                line-height: $line-height-3;
+                color:$color-blue-3;
+            }
+        }
+    }
+    .carousel-control-next {
+        span{
+            right: 0;
+        }   
+    }
+    .carousel-control-prev {
+        span{
+            left: 0;
+        }   
+    }
+}
+
+// RESPONSIE
+
+@include responsive("small"){
+    .verhicle__tab{
+        li{
+            a{
+                font-size: 10px !important;
+                margin: 0 5px !important;
+            }
+            #tab_visible, #tab_visible2{
+                display: none;
+            }
+        }
+    }
+}
+@include responsive("medium"){
+    .verhicle__tab{
+        li{
+            a{
+                font-size: 12px !important;
+                margin: 0 8px !important;
+            }
+            #tab_visible{
+                display: none;
+            }
+        }
+    }
+}

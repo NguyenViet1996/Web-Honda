@@ -1,0 +1,121 @@
+.honda__carousel{
+    #honda__carousel-content{
+        position: relative;
+        ol{
+            li{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+        }
+        .carousel-indicators{
+            bottom: -40px !important;
+            .active{
+                background-color: $color-blue-1;
+            }
+        }
+        .carousel-control-prev,.carousel-control-next{
+            span{
+                position: absolute;
+                width:$width-0+10;
+                height: $height-3;
+                background-color: $color-gray-1;
+                border-radius: $border-radius + 3;
+                i {
+                    font-size: $fs-5;
+                    line-height: $line-height-3;
+                    color:$color-blue-3;
+                }
+            }
+        }
+        .carousel-control-next {
+            span{
+                right: 0;
+            }   
+        }
+        .carousel-control-prev {
+            span{
+                left: 0;
+            }   
+        }
+        
+    }
+    .honda__carousel-inner{
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        h5{
+            font-weight: $fw-bold;
+        }
+        .honda__carousel-item{
+            position: relative;
+            #p2{
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            h5, button{
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            h5{
+                color: $color-white-0;
+                bottom: 60px;
+            }
+
+            p{
+                color:$color-white-0;
+                position: absolute;
+                bottom: 2px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 9px;
+                margin:$mg-1 0 0 0 !important;
+                display: inline !important;
+            }
+        }
+    }
+}
+
+
+// RESPONSIVE
+@include responsive("small") {
+    .honda__carousel{
+        .honda__carousel-inner{
+            img{
+                height:350px !important;
+            }
+            .honda__carousel-item{
+                button{
+                    position: absolute;
+                    bottom: 30px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 3px 80px;
+                }
+            }
+        }
+        
+    }
+    .carousel-item{
+        width: 100% !important;
+        text-align: center !important;
+        h5{
+            font-size: 14px;
+        }
+        p{
+            font-size: 7px;
+        }
+    }
+   
+}
+@include responsive("medium") {
+    .carousel-item{
+        width: 100% !important;
+        text-align: center !important;
+        
+    }
+   
+}

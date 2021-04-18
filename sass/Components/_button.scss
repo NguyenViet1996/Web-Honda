@@ -1,0 +1,26 @@
+.honda-btnRed{
+    @include styleButton($color-red-1,white,$pd-0,$pd-3,50px,$fs-0);
+    @include styleText(white,$fs-0,$fw-bold-0);
+    @include styleButtonHover($color-red-1,$color-white-0);
+}
+
+.honda-btnTrans{
+    @include styleButton($bg-color-0,white,$pd-1+1,$pd-3,50px,$fs-0);
+    @include styleText(white,$fs-0,$fw-bold-0);
+    @include styleButtonHover($color-blue-2,$color-white-0);
+    transition: 0.3s;
+    &:hover{
+        border-color: $color-blue-2;
+    }
+}
+
+.honda-btnBlue{
+    @include styleButton($color-blue-6,$bg-color-0,$pd-1+1,$pd-3,50px,$fs-0);
+    @include styleText(white,$fs-0,$fw-bold-0);
+    @include styleButtonHover($color-blue-6,$bg-color-0);
+    transition: 0.3s;
+    &:hover{
+        border-color: $color-blue-2;
+    }
+}
+
